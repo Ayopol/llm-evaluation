@@ -1,19 +1,15 @@
-# 🧪 LLM Evaluation Lab
+# LLM Evaluation Lab
 
-## 📌 Overview
+## Overview
 
-This project aims to systematically evaluate Large Language Model (LLM) performance on a sentiment classification task.
+A systematic framework to evaluate how prompt engineering strategies affect Large Language Model (LLM) performance on a sentiment analysis task.
 
-Rather than simply using LLMs, this project focuses on:
+This project focuses on **prompt design, evaluation, and behavioral analysis**, not model training.
 
-* prompt engineering (baseline vs few-shot)
-* structured evaluation
-* prompt comparison (A/B testing)
-* LLM-as-a-judge methodology
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 * Design and iterate on prompts
 * Evaluate LLM outputs using quantitative metrics
@@ -22,7 +18,7 @@ Rather than simply using LLMs, this project focuses on:
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 We use a subset of the Kaggle Sentiment Analysis Dataset:
 
@@ -31,7 +27,7 @@ We use a subset of the Kaggle Sentiment Analysis Dataset:
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 src/            # core logic (LLM calls, evaluation)
@@ -43,7 +39,7 @@ notebooks/      # analysis
 
 ---
 
-## ⚙️ Setup
+## Setup
 
 ```bash
 pip install -r requirements.txt
@@ -57,7 +53,7 @@ OPENAI_API_KEY=your_key
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ```bash
 python app/runner.py
@@ -65,7 +61,7 @@ python app/runner.py
 
 ---
 
-## 📈 Evaluation Metrics
+## Evaluation Metrics
 
 * Accuracy
 * F1 Score
@@ -73,16 +69,7 @@ python app/runner.py
 
 ---
 
-## 🔍 Experiments
-
-| Prompt | Type      | Description       |
-| ------ | --------- | ----------------- |
-| V1     | Zero-shot | Basic instruction |
-| V2     | Few-shot  | Includes examples |
-
----
-
-## 🧠 Key Learnings
+## Key Learnings
 
 * Prompt design significantly impacts performance
 * Few-shot prompting did not systematically improve performance on sentiment classification. While it improved recall for neutral cases, it degraded precision on positive and overall F1-score.
@@ -91,12 +78,12 @@ python app/runner.py
 
 ---
 
-## 🚧 Future Work
-
-* Add more tasks (NER, summarization)
-* Improve evaluation robustness
-* Add UI dashboard
-
+## Tech Stack
+Python
+OpenAI API
+Pandas
+Scikit-learn
+Matplotlib / Seaborn
 ---
 
 ## 👤 Author

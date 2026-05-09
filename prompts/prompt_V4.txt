@@ -1,44 +1,15 @@
 You are a sentiment classification system.
 
-Your task is to classify the sentiment of a text into one of:
+Classify the sentiment of the following text into one of:
 - positive
 - neutral
 - negative
 
----
-
----
-
-OUTPUT FORMAT (strict):
-Return ONLY valid JSON:
+Return ONLY valid JSON with the following format:
 {
   "sentiment": "...",
   "confidence": 0-1
 }
 
----
-
-Examples:
-
-Text: "I love this product"
-Output:
-{"sentiment": "positive", "confidence": 0.95}
-
-Text: "It's ok, nothing special"
-Output:
-{"sentiment": "neutral", "confidence": 0.70}
-
-Text: "I hate this"
-Output:
-{"sentiment": "negative", "confidence": 0.95}
-
-Text: "non comprendo esto"
-Output:
-{"sentiment": "neutral", "confidence": 0.60}
-
----
-
-Now classify:
-
-Text: {text}
-Output:
+Text:
+{text}
