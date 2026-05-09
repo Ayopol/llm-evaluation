@@ -3,6 +3,8 @@ import pandas as pd
 from llm_evaluation.llm.llm import call_llm
 from llm_evaluation.utils.parser import parse_json_response
 from llm_evaluation.evaluation.metrics import evaluate_predictions
+from llm_evaluation.evaluation.visualization import plot_global_metrics, plot_label_distribution
+
 
 
 df = pd.read_csv("data/dataset.csv")
@@ -48,16 +50,33 @@ def run_experiment(prompt_path, output_path):
 
 results_v1, metrics_v1 = run_experiment(
     "prompts/prompt_v1.txt",
-    "results_v1.csv"
+    "results/results_v1.csv"
 )
 
 results_v2, metrics_v2 = run_experiment(
     "prompts/prompt_v2.txt",
-    "results_v2.csv"
+    "results/results_v2.csv"
 )
+
+results_v3, metrics_v3 = run_experiment(
+    "prompts/prompt_v3.txt",
+    "results/results_v3.csv"
+)
+
 
 print("\nV1 METRICS")
 print(metrics_v1)
 
 print("\nV2 METRICS")
 print(metrics_v2)
+
+print("\nV3 METRICS")
+print(metrics_v3)
+
+metrics_dict = {
+    "V1": metrics_v1,
+    "V2": metrics_v2,
+    "V3": metrics_v3
+}
+
+plot_global_metrics(metrics_dict)

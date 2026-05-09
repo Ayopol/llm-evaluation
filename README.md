@@ -34,7 +34,7 @@ We use a subset of the Kaggle Sentiment Analysis Dataset:
 ## 🏗️ Project Structure
 
 ```
-app/            # core logic (LLM calls, evaluation)
+src/            # core logic (LLM calls, evaluation)
 prompts/        # prompt templates
 data/           # dataset (not versioned)
 evaluation/     # results
@@ -86,6 +86,7 @@ python app/runner.py
 
 * Prompt design significantly impacts performance
 * Few-shot prompting did not systematically improve performance on sentiment classification. While it improved recall for neutral cases, it degraded precision on positive and overall F1-score.
+* Adding explicit behavioral constraints in prompts led to systematic bias towards the neutral class, reducing overall classification performance.
 * Evaluation is critical for reliable LLM applications
 
 ---
