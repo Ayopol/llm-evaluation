@@ -85,7 +85,7 @@ python app/runner.py
 ## 🧠 Key Learnings
 
 * Prompt design significantly impacts performance
-* Few-shot prompting improves consistency
+* Few-shot prompting did not systematically improve performance on sentiment classification. While it improved recall for neutral cases, it degraded precision on positive and overall F1-score.
 * Evaluation is critical for reliable LLM applications
 
 ---
