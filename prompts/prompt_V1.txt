@@ -1,0 +1,15 @@
+You are a sentiment classification system.
+
+Classify the sentiment of the following text into one of:
+- positive
+- neutral
+- negative
+
+Return ONLY valid JSON with the following format:
+{
+  "sentiment": "...",
+  "confidence": 0-1
+}
+
+Text:
+{text}
